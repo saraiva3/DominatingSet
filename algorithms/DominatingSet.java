@@ -84,15 +84,12 @@ public class DominatingSet{
     					if(dominatorNeigh.get(z).getDominators().size() > 1)     					
     						number++;
     					else if(dominatorNeigh.get(z).getDominators().size() == 1 && dominatorNeigh.get(z).getNeighbors().size() == 1)
-    						number++;
-    					
-    				}
-    			
+    						number++;    					
+    				}    			
     				if(number == dominatorNeigh.size())    					
-    					flags.add(1);
+    				    flags.add(1);
     				else 
-    				    flags.add(0);
-    			     			    	
+    				    flags.add(0);    			     			    	
     			}
     			if(!flags.contains(0)) {    			
     				nodes.get(i).setDominator(true);
@@ -101,8 +98,7 @@ public class DominatingSet{
         				dominantSet.remove(dominatorsList.get(j));
         				dominatorsList.get(j).setDominator(false);
         				dominatorsList.get(j).setDominated(true,  nodes.get(i));
-        			}
-    				
+        			}    				
     			}
     	 	}    		    
     	}
@@ -120,8 +116,7 @@ public class DominatingSet{
     					dominantSet.get(i).setDominator(false);
     				}
     			}
-    		}  		
-    		
+    		}   		
     	}
     	return dominantSet;    	
     }
